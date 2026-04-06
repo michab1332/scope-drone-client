@@ -5,24 +5,43 @@
         <div class="flex flex-col gap-4">
           <SharedIcon />
           <p class="max-w-xs text-gray-500 font-sans text-[10px] uppercase tracking-widest leading-loose font-bold">
-            Professional drone services for your business. Quality and precision in every frame.
+            Profesjonalne usługi dronami dla Twojego biznesu. Jakość i precyzja w każdym kadrze.
           </p>
-          <div class="text-xs text-gray-800 mt-4">© {{ new Date().getFullYear() }} Scopedrone. All Rights Reserved.</div>
+          <div class="text-xs text-gray-800 mt-4 italic">
+            © {{ new Date().getFullYear() }} Scopedrone. Wszelkie prawa zastrzeżone.
+          </div>
         </div>
         
         <div class="grid grid-cols-2 gap-12 md:gap-24">
+          <!-- Sekcja Regulaminy & Nawigacja -->
           <div class="flex flex-col gap-4 uppercase tracking-[0.2em] text-[10px] font-bold">
-            <span class="text-gray-400">Navigation</span>
+            <span class="text-gray-400">Regulaminy</span>
             <nav class="flex flex-col gap-2">
-              <a href="#" class="hover:text-white transition-colors">Home</a>
-              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+              <NuxtLink to="#" class="hover:text-white transition-colors">Polityka prywatności</NuxtLink>
+              <NuxtLink to="#" class="hover:text-white transition-colors">Regulamin</NuxtLink>
             </nav>
           </div>
+
+          <!-- Sekcja Social Media -->
           <div class="flex flex-col gap-4 uppercase tracking-[0.2em] text-[10px] font-bold">
-            <span class="text-gray-400">Socials</span>
+            <span class="text-gray-400">Social Media</span>
             <nav class="flex flex-col gap-2">
-              <a href="#" class="hover:text-white transition-colors">Instagram</a>
-              <a href="#" class="hover:text-white transition-colors">Facebook</a>
+              <a 
+                href="https://www.instagram.com/scopedrone_kb" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="hover:text-white transition-colors"
+              >
+                Instagram
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=61580575165689" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="hover:text-white transition-colors"
+              >
+                Facebook
+              </a>
             </nav>
           </div>
         </div>
@@ -33,6 +52,6 @@
 
 <script setup lang="ts">
 /**
- * Global Footer Component
+ * Footer
  */
 </script>
