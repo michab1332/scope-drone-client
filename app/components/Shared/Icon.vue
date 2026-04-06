@@ -11,7 +11,7 @@
   >
     <div class="flex gap-2 items-center">
       <img
-        src="/assets/svgs/logo-orange.svg"
+        src="/assets/svgs/logo.svg"
         alt="ScopeDrone Logo" 
         width="35" 
         height="35"

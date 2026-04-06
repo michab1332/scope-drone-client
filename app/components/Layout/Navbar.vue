@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /**
- * Prawdziwy "Fixed" Navbar - Gwarantowana widoczność przy przewijaniu
+ * Navbar
  */
 const isMenuOpen = ref(false)
 
@@ -34,14 +34,10 @@ const navLinks = [
 </script>
 
 <template>
-  <!-- 
-    Zmieniono na fixed top-0 left-0. 
-    Teraz nagłówek jest "przyklejony" do okna przeglądarki, a nie do kontenera.
-  -->
   <header 
     class="fixed top-0 left-0 w-full py-4 z-[200] border-b transition-all duration-300"
     :class="[
-      isMenuOpen ? 'border-transparent bg-transparent' : 'border-gray-800 bg-black/90 backdrop-blur-md'
+      isMenuOpen ? 'border-transparent bg-transparent' : 'border-gray-800 bg-black/70 backdrop-blur-[5px]'
     ]"
   >
     <AppContainer class="flex justify-between items-center relative">
@@ -113,7 +109,7 @@ const navLinks = [
         
         <div class="mt-auto py-12">
           <p class="text-[10px] text-gray-700 font-sans uppercase tracking-[0.4em] font-bold">
-            Scopedrone — Systemy Bezzałogowe
+            Scopedrone <br/> Krzysztof Brzostek
           </p>
           <div class="h-px w-full bg-gray-900 mt-4" />
         </div>
