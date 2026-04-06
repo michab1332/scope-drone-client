@@ -48,6 +48,14 @@ const posterUrl = img('/hero-image.jpg', { width: 1920, format: 'webp', quality:
           Scopedrone
         </h1>
       </div>
+
+      <!-- Description Text -->
+      <div class="max-w-2xl mt-6 md:mt-8 px-4">
+        <p class="text-gray-400 text-sm md:text-lg lg:text-xl font-light tracking-wide leading-relaxed text-balance">
+          Profesjonalne ujęcia z powietrza. <br class="hidden md:block" />
+          Odkryj potencjał nieruchomości, inwestycji i krajobrazów z zupełnie nowej perspektywy.
+        </p>
+      </div>
     </AppContainer>
     
     <!-- Bottom line -->
