@@ -5,6 +5,13 @@
  */
 const img = useImage()
 const posterUrl = img('/hero-image.jpg', { width: 1920, format: 'webp', quality: 80 })
+
+const scrollToAdvantages = () => {
+  const target = document.querySelector('#advantages')
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
@@ -57,6 +64,19 @@ const posterUrl = img('/hero-image.jpg', { width: 1920, format: 'webp', quality:
         </p>
       </div>
     </AppContainer>
+
+    <!-- Scroll Indicator - PRZENIESIONY NA DÓŁ SEKCJI -->
+    <div 
+      class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 group cursor-pointer z-20" 
+      @click="scrollToAdvantages"
+    >
+      <span class="text-[9px] text-gray-600 uppercase tracking-[0.3em] font-bold group-hover:text-gray-400 transition-colors">
+        Scroll
+      </span>
+      <div class="w-px h-12 bg-gradient-to-b from-gray-800 to-transparent relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1/3 bg-[#00E275] animate-scroll-line" />
+      </div>
+    </div>
     
     <!-- Bottom line -->
     <div class="absolute bottom-0 left-0 w-full h-px bg-gray-800" />
