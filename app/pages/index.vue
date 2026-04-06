@@ -10,8 +10,8 @@
 
 <script setup lang="ts">
 /**
- * Strona główna (Index)
- * Struktura oparta na komponentach z folderu app/components/Home/
+ * Home Page (Index)
+ *
  */
 definePageMeta({
   layout: 'landing'
