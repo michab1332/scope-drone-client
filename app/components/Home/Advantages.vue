@@ -59,7 +59,7 @@ const handleMouseMove = (e: MouseEvent, index: number) => {
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
+    if (entries[0]?.isIntersecting) {
       isVisible.value = true
       observer.disconnect()
     }
