@@ -31,8 +31,8 @@ export default defineNuxtConfig({
     families: {
       Inter: [400, 700, 900],
     },
-    display: 'swap', // Zapobiega miganiu tekstu przy ładowaniu
-    download: true   // Pobiera czcionki na Twój serwer (najlepiej dla SEO i szybkości)
+    display: 'swap',
+    download: true
   },
   future: {
     compatibilityVersion: 4,
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   eslint: {
     config: {
-      stylistic: true // Włącza nowoczesne, czyste reguły stylistyczne
+      stylistic: true
     }
   }
 })
