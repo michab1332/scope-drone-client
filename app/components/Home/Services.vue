@@ -83,14 +83,12 @@ onMounted(() => {
           :style="{ transitionDelay: `${index * 150}ms` }"
           :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'"
         >
-          <!-- Background Image -->
-          <div 
-            class="absolute inset-0 transition-transform duration-1000 group-hover:scale-110"
-            :style="{
-              backgroundImage: `url(${service.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }"
+          <!-- Background Image (NuxtImg for SEO) -->
+          <NuxtImg 
+            :src="service.image"
+            :alt="`Scopedrone - Usługi: ${service.title}`"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            loading="lazy"
           />
           
           <!-- Overlay Gradients (Persistent darken for text readability) -->

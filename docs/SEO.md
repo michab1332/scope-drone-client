@@ -15,15 +15,17 @@ Obecnie strona działa jako nowoczesna Single Page Application (SPA) oparta na N
   - Domyślny `description` dla całej witryny.
 
 ### B. Meta Dane Strony Głównej (`app/pages/index.vue`)
-Wykorzystano funkcję `useSeoMeta()` dla precyzyjnego sterowania wyglądem w Google i Social Media:
+Wykorzystano funkcję `useSeoMeta()` oraz dane strukturalne JSON-LD:
 - **Tytuł:** `Scopedrone | Nowa Perspektywa Twojej Inwestycji`.
 - **OpenGraph (FB/Instagram):** Skonfigurowane tagi `ogTitle`, `ogDescription` oraz `ogImage`.
-- **Twitter Card:** Ustawiony format `summary_large_image` dla atrakcyjnego wyglądu linków.
+- **Twitter Card:** Ustawiony format `summary_large_image`.
+- **Structured Data (JSON-LD):** Wdrożono obiekt `ProfessionalService`, który informuje Google o typie działalności, lokalizacji (Warmia i Mazury) oraz profilach społecznościowych.
 
-### C. Dostępność i Semantyka (A11y)
+### C. Image SEO i Dostępność
+- **NuxtImg:** Zastąpiono style `background-image` komponentem `<NuxtImg>`, co pozwala wyszukiwarkom indeksować zdjęcia usług.
+- **Alt Tags:** Wszystkie kluczowe obrazy (o nas, usługi, hero) posiadają opisowe atrybuty `alt` ze słowami kluczowymi.
 - **Struktura Nagłówków:** Poprawne użycie `H1` w Hero i `H2` w sekcjach tematycznych.
-- **Aria-labels:** Dodano etykiety dla czytników ekranu w `Navbar`, `Footer` oraz sekcji `Hero` (szczególnie przy elementach dekoracyjnych i wideo).
-- **Video SEO:** Tło wideo w Hero posiada `aria-hidden="true"` oraz `title`, co zapobiega błędom dostępności przy zachowaniu walorów estetycznych.
+- **Aria-labels:** Dodano etykiety dla czytników ekranu w `Navbar`, `Footer` oraz sekcji `Hero`.
 
 ---
 
