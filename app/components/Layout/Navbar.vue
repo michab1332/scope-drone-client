@@ -39,13 +39,17 @@ const navLinks = [
     :class="[
       isMenuOpen ? 'border-transparent bg-transparent' : 'border-gray-800 bg-black/70 backdrop-blur-[5px]'
     ]"
+    aria-label="Main Navigation"
   >
     <AppContainer class="flex justify-between items-center relative">
       <!-- Logo Komponent -->
       <SharedIcon @click="closeMenu" />
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex gap-8 text-xs md:text-sm text-gray-400 font-sans uppercase tracking-widest font-bold">
+      <nav 
+        class="hidden md:flex gap-8 text-xs md:text-sm text-gray-400 font-sans uppercase tracking-widest font-bold"
+        aria-label="Desktop menu"
+      >
         <NuxtLink 
           v-for="link in navLinks" 
           :key="link.to" 

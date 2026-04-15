@@ -29,6 +29,8 @@ const scrollToAdvantages = () => {
         playsinline
         class="w-full h-full object-cover opacity-60"
         :poster="posterUrl"
+        aria-hidden="true"
+        title="Scopedrone Background Video"
       >
         <source src="/assets/videos/pexels.mp4" type="video/mp4">
         Your browser does not support the video tag.

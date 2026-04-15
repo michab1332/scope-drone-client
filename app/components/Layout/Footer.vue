@@ -16,7 +16,7 @@
           <!-- Sekcja Regulaminy & Nawigacja -->
           <div class="flex flex-col gap-4 uppercase tracking-[0.2em] text-[10px] font-bold">
             <span class="text-gray-400">Regulaminy</span>
-            <nav class="flex flex-col gap-2">
+            <nav class="flex flex-col gap-2" aria-label="Legal links">
               <NuxtLink to="#" class="hover:text-white transition-colors">Polityka prywatności</NuxtLink>
               <NuxtLink to="#" class="hover:text-white transition-colors">Regulamin</NuxtLink>
             </nav>
@@ -25,7 +25,7 @@
           <!-- Sekcja Social Media -->
           <div class="flex flex-col gap-4 uppercase tracking-[0.2em] text-[10px] font-bold">
             <span class="text-gray-400">Social Media</span>
-            <nav class="flex flex-col gap-2">
+            <nav class="flex flex-col gap-2" aria-label="Social media links">
               <a 
                 href="https://www.instagram.com/scopedrone_kb" 
                 target="_blank" 

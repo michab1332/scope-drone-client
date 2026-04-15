@@ -2,10 +2,20 @@
 export default defineNuxtConfig({
     app: {
         head: {
-            title: 'ScopeDrone', // default fallback title
+            title: 'Scopedrone',
+            titleTemplate: '%s | Profesjonalne Ujęcia z Powietrza',
             htmlAttrs: {
                 lang: 'pl',
             },
+            meta: [
+                { charset: 'utf-8' },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                { name: 'format-detection', content: 'telephone=no' },
+                { name: 'author', content: 'Krzysztof Brzostek' },
+                { name: 'description', content: 'Profesjonalne ujęcia z powietrza dronem. Odkryj potencjał nieruchomości, inwestycji i krajobrazów z zupełnie nowej perspektywy.' },
+                { property: 'og:site_name', content: 'Scopedrone' },
+                { property: 'og:type', content: 'website' },
+            ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
             ],
