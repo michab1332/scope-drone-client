@@ -17,8 +17,7 @@
           <div class="flex flex-col gap-4 uppercase tracking-[0.2em] text-[10px] font-bold">
             <span class="text-gray-400">Regulaminy</span>
             <nav class="flex flex-col gap-2" aria-label="Legal links">
-              <NuxtLink to="#" class="hover:text-white transition-colors">Polityka prywatności</NuxtLink>
-              <NuxtLink to="#" class="hover:text-white transition-colors">Regulamin</NuxtLink>
+              <NuxtLink to="/polityka-prywatnosci" class="hover:text-white transition-colors">Polityka prywatności</NuxtLink>
             </nav>
           </div>
 
