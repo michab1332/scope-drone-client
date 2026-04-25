@@ -110,8 +110,14 @@ const handleSubmit = async () => {
           </p>
 
           <!-- Contact Details -->
-          <div class="space-y-6">
-            <a href="mailto:scopedrone.kb@gmail.com" class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300">
+          <div class="space-y-6" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Scopedrone">
+            <a 
+              href="mailto:scopedrone.kb@gmail.com" 
+              itemprop="email"
+              aria-label="Wyślij e-mail do Scopedrone"
+              class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300"
+            >
               <div class="w-12 h-12 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -128,6 +134,8 @@ const handleSubmit = async () => {
                 href="https://www.instagram.com/scopedrone_kb" 
                 target="_blank" 
                 rel="noopener noreferrer" 
+                itemprop="sameAs"
+                aria-label="Instagram Scopedrone"
                 class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300"
               >
                 <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
@@ -142,6 +150,8 @@ const handleSubmit = async () => {
                 href="https://www.facebook.com/profile.php?id=61580575165689" 
                 target="_blank" 
                 rel="noopener noreferrer" 
+                itemprop="sameAs"
+                aria-label="Facebook Scopedrone"
                 class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300"
               >
                 <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
@@ -267,6 +277,13 @@ const handleSubmit = async () => {
                   <span>Przetwarzanie...</span>
                 </template>
               </button>
+
+              <!-- Privacy Policy Notice -->
+              <p class="text-[10px] text-gray-600 text-center leading-relaxed font-light">
+                Klikając "Wyślij wiadomość", akceptujesz naszą 
+                <NuxtLink to="/polityka-prywatnosci" class="text-gray-400 hover:text-[#00E275] underline transition-colors">Politykę Prywatności</NuxtLink>. 
+                Twoje dane będą przetwarzane wyłącznie w celu obsługi zapytania.
+              </p>
             </form>
           </div>
         </div>

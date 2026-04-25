@@ -32,13 +32,19 @@
           </h2>
           <div class="space-y-4 leading-relaxed">
             <p>
-              Dane osobowe (imię, adres e-mail, treść wiadomości) są zbierane wyłącznie za pośrednictwem formularza kontaktowego w celu udzielenia odpowiedzi na zapytanie ofertowe.
+              Dane osobowe (imię, adres e-mail, treść wiadomości) są zbierane za pośrednictwem formularza kontaktowego w celu udzielenia odpowiedzi na zapytanie ofertowe.
             </p>
             <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Podstawa prawna:</strong> Przetwarzanie jest niezbędne do podjęcia działań na żądanie osoby, której dane dotyczą, przed zawarciem umowy.</li>
-              <li><strong>Okres przechowywania:</strong> Dane przechowywane są przez okres niezbędny do obsługi zapytania lub do momentu wycofania zgody.</li>
-              <li><strong>Lokalizacja danych:</strong> Dane są przechowywane na bezpiecznych serwerach firmy Hetzner Online GmbH w Norymberdze (Niemcy), co gwarantuje wysoki poziom ochrony zgodnie z normami UE.</li>
-              <li><strong>Twoje prawa:</strong> Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia ("prawo do bycia zapomnianym") oraz ograniczenia przetwarzania.</li>
+              <li><strong>Podstawa prawna:</strong> Przetwarzanie jest niezbędne do podjęcia działań na żądanie osoby, której dane dotyczą, przed zawarciem umowy (Art. 6 ust. 1 lit. b RODO).</li>
+              <li><strong>Dobrowolność:</strong> Podanie danych jest dobrowolne, jednak niezbędne do otrzymania odpowiedzi na zapytanie.</li>
+              <li><strong>Odbiorcy danych:</strong> W celu zapewnienia sprawnej obsługi korespondencji, dane są przetwarzane przy użyciu narzędzi zewnętrznych dostawców:
+                <ul class="list-circle pl-6 mt-2 opacity-80">
+                  <li>Hetzner Online GmbH (Niemcy) – hosting serwera i bazy danych.</li>
+                  <li>Resend, Inc. (USA) – usługa dostarczania poczty elektronicznej (przetwarzanie odbywa się w oparciu o Standardowe Klauzule Umowne zapewniające wysoki poziom ochrony).</li>
+                </ul>
+              </li>
+              <li><strong>Okres przechowywania:</strong> Dane przechowywane są przez okres niezbędny do obsługi zapytania lub do momentu wycofania zgody / zgłoszenia sprzeciwu.</li>
+              <li><strong>Twoje prawa:</strong> Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia ("prawo do bycia zapomnianym"), ograniczenia przetwarzania oraz prawo do wniesienia skargi do organu nadzorczego (Prezesa Urzędu Ochrony Danych Osobowych).</li>
             </ul>
           </div>
         </section>

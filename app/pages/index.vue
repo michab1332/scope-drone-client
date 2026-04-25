@@ -32,17 +32,22 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         'name': 'Scopedrone - Krzysztof Brzostek',
         'description': 'Profesjonalne usługi dronem: filmowanie i fotografia z powietrza na Warmii i Mazurach.',
         'url': 'https://scopedrone.pl',
         'image': 'https://scopedrone.pl/hero-image.jpg',
+        'email': 'scopedrone.kb@gmail.com',
         'address': {
           '@type': 'PostalAddress',
           'addressRegion': 'Warmińsko-Mazurskie',
           'addressCountry': 'PL'
+        },
+        'founder': {
+          '@type': 'Person',
+          'name': 'Krzysztof Brzostek'
         },
         'geo': {
           '@type': 'GeoCoordinates',
