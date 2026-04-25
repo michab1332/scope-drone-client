@@ -46,17 +46,36 @@ const form = reactive({
 })
 
 const isSubmitting = ref(false)
+const isSuccess = ref(false)
+const errorMessage = ref('')
+
 const handleSubmit = async () => {
   isSubmitting.value = true
-  // Integracja z backendem w przyszłości
-  console.log('Form data:', form)
-  setTimeout(() => {
-    isSubmitting.value = false
-    alert('Wiadomość została wysłana (demo)')
+  isSuccess.value = false
+  errorMessage.value = ''
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: { ...form }
+    })
+    
+    isSuccess.value = true
+    // Reset form
     form.name = ''
     form.email = ''
     form.message = ''
-  }, 1000)
+    
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      isSuccess.value = false
+    }, 5000)
+  } catch (err: any) {
+    console.error('Submission error:', err)
+    errorMessage.value = err.data?.statusMessage || 'Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
@@ -158,53 +177,95 @@ const handleSubmit = async () => {
             />
 
             <form @submit.prevent="handleSubmit" class="relative z-10 space-y-8">
-              <!-- Name Input -->
-              <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 ml-1">Imię i Nazwisko</label>
-                <input 
-                  v-model="form.name"
-                  type="text" 
-                  placeholder="np. Jan Kowalski"
-                  required
-                  class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300"
+              <!-- Status Messages with Transitions -->
+              <div class="min-h-[60px] relative">
+                <Transition
+                  enter-active-class="transition duration-300 ease-out"
+                  enter-from-class="opacity-0 -translate-y-2"
+                  enter-to-class="opacity-100 translate-y-0"
+                  leave-active-class="transition duration-200 ease-in"
+                  leave-from-class="opacity-100 translate-y-0"
+                  leave-to-class="opacity-0 -translate-y-2"
                 >
+                  <!-- Success Message -->
+                  <div v-if="isSuccess" class="absolute inset-0 bg-[#00E275]/10 border border-[#00E275]/20 p-4 rounded-xl flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-[#00E275] flex items-center justify-center text-black shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <p class="text-white text-sm font-medium">Wiadomość została wysłana pomyślnie!</p>
+                  </div>
+
+                  <!-- Error Message -->
+                  <div v-else-if="errorMessage" class="absolute inset-0 bg-red-500/10 border border-red-500/20 p-4 rounded-xl flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <p class="text-white text-sm font-medium">{{ errorMessage }}</p>
+                  </div>
+                </Transition>
               </div>
 
-              <!-- Email Input -->
-              <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 ml-1">Adres E-mail</label>
-                <input 
-                  v-model="form.email"
-                  type="email" 
-                  placeholder="twoj@email.com"
-                  required
-                  class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300"
-                >
-              </div>
+              <div class="space-y-8 transition-all duration-500" :class="{ 'opacity-50 pointer-events-none': isSubmitting }">
+                <!-- Name Input -->
+                <div class="space-y-2">
+                  <label class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 ml-1">Imię i Nazwisko</label>
+                  <input 
+                    v-model="form.name"
+                    type="text" 
+                    placeholder="np. Jan Kowalski"
+                    required
+                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300"
+                  >
+                </div>
 
-              <!-- Message Input -->
-              <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 ml-1">Opis projektu</label>
-                <textarea 
-                  v-model="form.message"
-                  rows="4"
-                  placeholder="Opisz krótko czego potrzebujesz..."
-                  required
-                  class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300 resize-none"
-                ></textarea>
+                <!-- Email Input -->
+                <div class="space-y-2">
+                  <label class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 ml-1">Adres E-mail</label>
+                  <input 
+                    v-model="form.email"
+                    type="email" 
+                    placeholder="twoj@email.com"
+                    required
+                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300"
+                  >
+                </div>
+
+                <!-- Message Input -->
+                <div class="space-y-2">
+                  <label class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 ml-1">Opis projektu</label>
+                  <textarea 
+                    v-model="form.message"
+                    rows="4"
+                    placeholder="Opisz krótko czego potrzebujesz..."
+                    required
+                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300 resize-none"
+                  ></textarea>
+                </div>
               </div>
 
               <!-- Submit Button -->
               <button 
                 type="submit"
                 :disabled="isSubmitting"
-                class="w-full group relative flex items-center justify-center gap-3 bg-white text-black font-bold uppercase tracking-widest py-5 rounded-xl overflow-hidden transition-all duration-300 hover:bg-[#00E275] active:scale-[0.98] disabled:opacity-50"
+                class="w-full group relative flex items-center justify-center gap-3 bg-white text-black font-bold uppercase tracking-widest py-5 rounded-xl overflow-hidden transition-all duration-300 hover:bg-[#00E275] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
               >
-                <span v-if="!isSubmitting">Wyślij wiadomość</span>
-                <span v-else>Wysyłanie...</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+                <template v-if="!isSubmitting">
+                  <span>Wyślij wiadomość</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </template>
+                <template v-else>
+                  <svg class="animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  <span>Przetwarzanie...</span>
+                </template>
               </button>
             </form>
           </div>

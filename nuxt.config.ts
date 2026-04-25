@@ -44,5 +44,8 @@ export default defineNuxtConfig({
     config: {
       stylistic: true
     }
+  },
+  runtimeConfig: {
+    resendApiKey: process.env.RESEND_API_KEY
   }
 })
