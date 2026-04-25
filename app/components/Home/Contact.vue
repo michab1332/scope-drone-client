@@ -91,15 +91,48 @@ const handleSubmit = async () => {
           </p>
 
           <!-- Contact Details -->
-          <div class="space-y-4">
+          <div class="space-y-6">
             <a href="mailto:scopedrone.kb@gmail.com" class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300">
-              <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50">
+              <div class="w-12 h-12 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <span class="font-medium tracking-tight">scopedrone.kb@gmail.com</span>
+              <div class="flex flex-col">
+                <span class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Napisz do nas</span>
+                <span class="font-medium tracking-tight">scopedrone.kb@gmail.com</span>
+              </div>
             </a>
+
+            <div class="flex flex-col gap-4 pt-4 border-t border-gray-900">
+              <a 
+                href="https://www.instagram.com/scopedrone_kb" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300"
+              >
+                <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                </div>
+                <span class="text-sm font-medium tracking-tight">Instagram</span>
+              </a>
+
+              <a 
+                href="https://www.facebook.com/profile.php?id=61580575165689" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300"
+              >
+                <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                </div>
+                <span class="text-sm font-medium tracking-tight">Facebook</span>
+              </a>
+            </div>
           </div>
         </div>
 
