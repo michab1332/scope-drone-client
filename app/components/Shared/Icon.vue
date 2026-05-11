@@ -6,15 +6,15 @@
 
 <template>
   <NuxtLink
-    to="#hero"
+    to="/"
     class="group font-bold text-xl uppercase tracking-tighter text-gray-100 hover:text-gray-300 transition-colors z-[120]"
   >
     <div class="flex gap-2 items-center">
       <img
-        src="/assets/svgs/logo.svg"
+        src="/assets/images/logo.png"
         alt="ScopeDrone Logo" 
-        width="35" 
-        height="35"
+        width="45"
+        height="45"
         class="transition-transform duration-700 ease-in-out group-hover:rotate-[360deg] select-none pointer-events-none"
       >
       <span class="uppercase font-sans">Scopedrone</span>
