@@ -26,8 +26,13 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
     '@nuxtjs/google-fonts',
-    '@nuxt/scripts'
+    '@nuxt/scripts',
+    '@nuxtjs/sitemap'
   ],
+  site: {
+    url: 'https://scopedrone.pl',
+    name: 'Scopedrone'
+  },
   googleFonts: {
     families: {
       Inter: [400, 700, 900],

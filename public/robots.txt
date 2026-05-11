@@ -1,2 +1,5 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://scopedrone.pl/sitemap.xml
