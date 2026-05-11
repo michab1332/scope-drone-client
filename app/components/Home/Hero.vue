@@ -42,9 +42,9 @@ const scrollToAdvantages = () => {
     <AppContainer class="relative z-10 flex flex-col items-center justify-center text-center">
       <!-- Badge - Perfekcyjne wyśrodkowanie i mikro-skala na mobilkach -->
       <div 
-        class="mb-3 md:mb-6 py-2 md:py-3 px-2.5 md:px-4 rounded-full border border-[#00E275]/20 bg-[#00E275]/5 backdrop-blur-md flex items-center justify-center"
+        class="mb-3 md:mb-6 py-2 md:py-3 px-2.5 md:px-4 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-md flex items-center justify-center"
       >
-        <span class="text-[#00E275] text-[7px] md:text-[9px] font-bold uppercase tracking-[0.3em] leading-none select-none -mr-[0.3em]">
+        <span class="text-primary text-[7px] md:text-[9px] font-bold uppercase tracking-[0.3em] leading-none select-none -mr-[0.3em]">
           Krzysztof Brzostek
         </span>
       </div>
@@ -76,7 +76,7 @@ const scrollToAdvantages = () => {
         Scroll
       </span>
       <div class="w-px h-12 bg-gradient-to-b from-gray-800 to-transparent relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1/3 bg-[#00E275] animate-scroll-line" />
+        <div class="absolute top-0 left-0 w-full h-1/3 bg-primary animate-scroll-line" />
       </div>
     </div>
     

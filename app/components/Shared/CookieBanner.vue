@@ -42,8 +42,8 @@ function useCookieConsent() {
       <div class="mx-auto max-w-4xl bg-white/95 backdrop-blur-md border border-gray-100 shadow-2xl rounded-2xl overflow-hidden">
         <div class="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
           <!-- Ikona/Grafika -->
-          <div class="hidden md:flex flex-shrink-0 w-16 h-16 bg-orange-50 items-center justify-center rounded-2xl">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="hidden md:flex flex-shrink-0 w-16 h-16 bg-primary/10 items-center justify-center rounded-2xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
               <path d="M8.5 8.5v.01" />
               <path d="M16 15.5v.01" />
@@ -58,7 +58,7 @@ function useCookieConsent() {
             <h3 class="text-lg font-bold text-gray-900 mb-1">Dbamy o Twoją prywatność</h3>
             <p class="text-sm text-gray-600 leading-relaxed">
               Używamy ciasteczek, aby analizować ruch na stronie i poprawiać jej działanie. Klikając „Akceptuję”, wyrażasz zgodę na używanie wszystkich plików cookie. Możesz też dowiedzieć się więcej w naszej 
-              <NuxtLink to="/polityka-prywatnosci" class="text-orange-600 hover:text-orange-700 underline font-medium tracking-tight">Polityce Prywatności</NuxtLink>.
+              <NuxtLink to="/polityka-prywatnosci" class="text-primary hover:text-primary-hover underline font-medium tracking-tight">Polityce Prywatności</NuxtLink>.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ function useCookieConsent() {
             </button>
             <button
               @click="acceptAll"
-              class="px-6 py-3 text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600 rounded-xl shadow-lg shadow-orange-200 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
+              class="px-6 py-3 text-sm font-semibold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-lg shadow-primary/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
             >
               Akceptuję wszystkie
             </button>

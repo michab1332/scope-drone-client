@@ -94,8 +94,8 @@ const handleSubmit = async () => {
           :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'"
         >
           <div class="flex items-center gap-4 mb-8">
-            <div class="w-12 h-[1px] bg-[#00E275]" />
-            <span class="text-[#00E275] text-sm font-bold uppercase tracking-[0.3em]">Kontakt</span>
+            <div class="w-12 h-[1px] bg-primary" />
+            <span class="text-primary text-sm font-bold uppercase tracking-[0.3em]">Kontakt</span>
           </div>
           
           <h2 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8">
@@ -116,9 +116,9 @@ const handleSubmit = async () => {
               href="mailto:scopedrone.kb@gmail.com" 
               itemprop="email"
               aria-label="Wyślij e-mail do Scopedrone"
-              class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300"
+              class="group flex items-center gap-4 text-white hover:text-primary transition-colors duration-300"
             >
-              <div class="w-12 h-12 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -136,9 +136,9 @@ const handleSubmit = async () => {
                 rel="noopener noreferrer" 
                 itemprop="sameAs"
                 aria-label="Instagram Scopedrone"
-                class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300"
+                class="group flex items-center gap-4 text-white hover:text-primary transition-colors duration-300"
               >
-                <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
+                <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                   </svg>
@@ -152,9 +152,9 @@ const handleSubmit = async () => {
                 rel="noopener noreferrer" 
                 itemprop="sameAs"
                 aria-label="Facebook Scopedrone"
-                class="group flex items-center gap-4 text-white hover:text-[#00E275] transition-colors duration-300"
+                class="group flex items-center gap-4 text-white hover:text-primary transition-colors duration-300"
               >
-                <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-[#00E275]/50 group-hover:bg-[#00E275]/5 transition-all duration-300">
+                <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                   </svg>
@@ -182,7 +182,7 @@ const handleSubmit = async () => {
               class="pointer-events-none absolute -inset-px transition-opacity duration-500"
               :class="isHovering ? 'opacity-100' : 'opacity-0'"
               :style="{
-                background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0, 226, 117, 0.08), transparent 80%)`
+                background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(205, 166, 96, 0.08), transparent 80%)`
               }"
             />
 
@@ -198,8 +198,8 @@ const handleSubmit = async () => {
                   leave-to-class="opacity-0 -translate-y-2"
                 >
                   <!-- Success Message -->
-                  <div v-if="isSuccess" class="absolute inset-0 bg-[#00E275]/10 border border-[#00E275]/20 p-4 rounded-xl flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-[#00E275] flex items-center justify-center text-black shrink-0">
+                  <div v-if="isSuccess" class="absolute inset-0 bg-primary/10 border border-primary/20 p-4 rounded-xl flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-black shrink-0">
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                       </svg>
@@ -228,7 +228,7 @@ const handleSubmit = async () => {
                     type="text" 
                     placeholder="np. Jan Kowalski"
                     required
-                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300"
+                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all duration-300"
                   >
                 </div>
 
@@ -240,7 +240,7 @@ const handleSubmit = async () => {
                     type="email" 
                     placeholder="twoj@email.com"
                     required
-                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300"
+                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all duration-300"
                   >
                 </div>
 
@@ -252,7 +252,7 @@ const handleSubmit = async () => {
                     rows="4"
                     placeholder="Opisz krótko czego potrzebujesz..."
                     required
-                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#00E275] focus:ring-1 focus:ring-[#00E275]/20 transition-all duration-300 resize-none"
+                    class="w-full bg-black/40 border border-gray-800 rounded-xl px-6 py-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all duration-300 resize-none"
                   ></textarea>
                 </div>
               </div>
@@ -261,7 +261,7 @@ const handleSubmit = async () => {
               <button 
                 type="submit"
                 :disabled="isSubmitting"
-                class="w-full group relative flex items-center justify-center gap-3 bg-white text-black font-bold uppercase tracking-widest py-5 rounded-xl overflow-hidden transition-all duration-300 hover:bg-[#00E275] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
+                class="w-full group relative flex items-center justify-center gap-3 bg-white text-black font-bold uppercase tracking-widest py-5 rounded-xl overflow-hidden transition-all duration-300 hover:bg-primary active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
               >
                 <template v-if="!isSubmitting">
                   <span>Wyślij wiadomość</span>
@@ -281,7 +281,7 @@ const handleSubmit = async () => {
               <!-- Privacy Policy Notice -->
               <p class="text-[10px] text-gray-600 text-center leading-relaxed font-light">
                 Klikając "Wyślij wiadomość", akceptujesz naszą 
-                <NuxtLink to="/polityka-prywatnosci" class="text-gray-400 hover:text-[#00E275] underline transition-colors">Politykę Prywatności</NuxtLink>. 
+                <NuxtLink to="/polityka-prywatnosci" class="text-gray-400 hover:text-primary underline transition-colors">Politykę Prywatności</NuxtLink>. 
                 Twoje dane będą przetwarzane wyłącznie w celu obsługi zapytania.
               </p>
             </form>
@@ -292,7 +292,7 @@ const handleSubmit = async () => {
     </AppContainer>
 
     <!-- Background Decoration -->
-    <div class="absolute -right-20 top-1/4 w-96 h-96 bg-[#00E275]/5 blur-[120px] rounded-full pointer-events-none" />
+    <div class="absolute -right-20 top-1/4 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
     <div class="absolute -left-20 bottom-1/4 w-96 h-96 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
   </section>
 </template>

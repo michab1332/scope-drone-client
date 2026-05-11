@@ -19,7 +19,7 @@
               <br />
               <strong class="text-white">Krzysztof Brzostek</strong>
               <br />
-              Adres: [ADRES DO UZUPEŁNIENIA]
+              Adres: Olszyny 65
               <br />
               E-mail: <a href="mailto:scopedrone.kb@gmail.com" class="text-white hover:underline">scopedrone.kb@gmail.com</a>
             </p>

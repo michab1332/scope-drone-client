@@ -98,7 +98,7 @@ onMounted(() => {
           <!-- Content (Always Visible) -->
           <div class="absolute inset-0 p-6 md:p-12 flex flex-col justify-end">
             <!-- Green Accent Line -->
-            <div class="w-10 h-1 bg-[#00E275] mb-4 md:mb-6 transform origin-left transition-transform duration-500 group-hover:scale-x-150 shadow-[0_0_10px_rgba(0,226,117,0.5)]" />
+            <div class="w-10 h-1 bg-primary mb-4 md:mb-6 transform origin-left transition-transform duration-500 group-hover:scale-x-150 shadow-[0_0_10px_rgba(205,166,96,0.5)]" />
             
             <h3 class="text-2xl md:text-4xl font-bold text-white mb-2 md:mb-4 uppercase tracking-tighter">
               {{ service.title }}
@@ -110,7 +110,7 @@ onMounted(() => {
           </div>
 
           <!-- Subtle Border Glow on Hover -->
-          <div class="absolute inset-0 border-2 border-[#00E275]/0 group-hover:border-[#00E275]/20 rounded-2xl md:rounded-3xl transition-colors duration-500 pointer-events-none" />
+          <div class="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-2xl md:rounded-3xl transition-colors duration-500 pointer-events-none" />
         </div>
       </div>
     </AppContainer>

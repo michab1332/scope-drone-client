@@ -49,13 +49,13 @@ onMounted(() => {
     class="py-24 border-b border-gray-900 bg-black relative overflow-hidden"
   >
     <!-- Static background ambient glow -->
-    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-[#00E275]/5 blur-[120px] rounded-full pointer-events-none" />
+    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
     <AppContainer>
       <div 
         ref="cardRef"
         @mousemove="handleMouseMove"
-        class="group relative border border-[#00E275]/20 bg-white/[0.02] backdrop-blur-sm rounded-3xl p-8 md:p-16 transition-all duration-1000 transform overflow-hidden"
+        class="group relative border border-primary/20 bg-white/[0.02] backdrop-blur-sm rounded-3xl p-8 md:p-16 transition-all duration-1000 transform overflow-hidden"
         :class="[
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         ]"
@@ -64,21 +64,22 @@ onMounted(() => {
         <div 
           class="pointer-events-none absolute -inset-px transition-opacity duration-300 opacity-0 group-hover:opacity-100"
           :style="{
-            background: `radial-gradient(600px circle at ${mouseX}px ${mouseY}px, rgba(0, 226, 117, 0.15), transparent 80%)`
+            background: `radial-gradient(600px circle at ${mouseX}px ${mouseY}px, rgba(205, 166, 96, 0.15), transparent 80%)`
           }"
         />
 
         <div class="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-16">
-          
+
           <!-- Large Percentage Number -->
           <div class="flex-shrink-0">
             <span 
-              class="text-7xl md:text-9xl font-black text-[#00E275] tracking-tighter leading-none block drop-shadow-[0_0_15px_rgba(0,226,117,0.3)]"
+              class="text-7xl md:text-9xl font-black text-primary tracking-tighter leading-none block drop-shadow-[0_0_15px_rgba(205,166,96,0.3)]"
               :class="{ 'animate-glow-pulse': isVisible }"
             >
               45%
             </span>
           </div>
+
 
           <!-- Vertical/Horizontal Divider -->
           <div 
@@ -92,7 +93,7 @@ onMounted(() => {
             :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'"
           >
             <h3 class="text-xl md:text-3xl font-bold text-white mb-4 uppercase tracking-tight leading-tight max-w-xl">
-              Ofert nieruchomości sprzedaje się szybciej z filmami z drona
+              Ofert nieruchomości sprzedaje się szybciej z ujęciami z drona
             </h3>
             <p class="text-gray-400 text-sm md:text-lg font-light leading-relaxed max-w-2xl text-balance">
               Wizualizacja z powietrza buduje natychmiastowe zaufanie, ukazuje pełen kontekst otoczenia i skutecznie wyróżnia ofertę na tle konkurencji, znacząco przyspieszając proces sprzedaży.
@@ -108,11 +109,11 @@ onMounted(() => {
 <style scoped>
 @keyframes glow-pulse {
   0%, 100% {
-    filter: drop-shadow(0 0 15px rgba(0, 226, 117, 0.3));
+    filter: drop-shadow(0 0 15px rgba(205, 166, 96, 0.3));
     transform: scale(1);
   }
   50% {
-    filter: drop-shadow(0 0 25px rgba(0, 226, 117, 0.6));
+    filter: drop-shadow(0 0 25px rgba(205, 166, 96, 0.6));
     transform: scale(1.02);
   }
 }

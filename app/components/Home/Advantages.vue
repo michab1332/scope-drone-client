@@ -78,7 +78,7 @@ onMounted(() => {
     class="py-16 md:py-24 border-b border-gray-900 bg-black relative overflow-hidden px-4"
   >
     <!-- Background accents -->
-    <div class="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-[#00E275]/5 blur-[100px] md:blur-[150px] rounded-full pointer-events-none" />
+    <div class="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 blur-[100px] md:blur-[150px] rounded-full pointer-events-none" />
     
     <AppContainer>
       <!-- Header Section -->
@@ -105,7 +105,7 @@ onMounted(() => {
           :key="index"
           :ref="(el) => { if (el) cardRefs[index] = el as HTMLElement }"
           @mousemove="(e) => handleMouseMove(e, index)"
-          class="group relative border border-gray-800 bg-white/[0.01] rounded-xl md:rounded-2xl p-6 md:p-12 overflow-hidden transition-all duration-700 hover:border-[#00E275]/30 hover:bg-white/[0.03]"
+          class="group relative border border-gray-800 bg-white/[0.01] rounded-xl md:rounded-2xl p-6 md:p-12 overflow-hidden transition-all duration-700 hover:border-primary/30 hover:bg-white/[0.03]"
           :style="{ transitionDelay: `${index * 150}ms` }"
           :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 md:translate-y-12'"
         >
@@ -113,14 +113,14 @@ onMounted(() => {
           <div 
             class="hidden md:block pointer-events-none absolute -inset-px transition-opacity duration-300 opacity-0 group-hover:opacity-100"
             :style="{
-              background: `radial-gradient(400px circle at ${mousePositions[index].x}px ${mousePositions[index].y}px, rgba(0, 226, 117, 0.1), transparent 80%)`
+              background: `radial-gradient(400px circle at ${mousePositions[index].x}px ${mousePositions[index].y}px, rgba(205, 166, 96, 0.1), transparent 80%)`
             }"
           />
 
           <div class="relative z-10 flex flex-col sm:flex-row gap-4 md:gap-8 items-start">
             <!-- Icon with circular green background -->
             <div 
-              class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#00E275] flex items-center justify-center text-black shadow-[0_0_15px_rgba(0,226,117,0.2)] md:shadow-[0_0_20px_rgba(0,226,117,0.3)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+              class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-primary flex items-center justify-center text-black shadow-[0_0_15px_rgba(205,166,96,0.2)] md:shadow-[0_0_20px_rgba(205,166,96,0.3)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 

@@ -46,6 +46,20 @@ export default defineNuxtConfig({
       stylistic: true
     }
   },
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#CDA660',
+              hover: '#B89555',
+            }
+          }
+        }
+      }
+    }
+  },
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
   }

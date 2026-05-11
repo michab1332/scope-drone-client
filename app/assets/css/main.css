@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary: #CDA660;
+    --primary-hover: #B89555;
+  }
+
   html {
     scroll-behavior: smooth;
     background-color: black;

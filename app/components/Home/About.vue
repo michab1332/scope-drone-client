@@ -72,7 +72,7 @@ const features = [
           </div>
           
           <!-- Background accent for the image -->
-          <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#00E275]/5 blur-[80px] rounded-full pointer-events-none" />
+          <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/5 blur-[80px] rounded-full pointer-events-none" />
         </div>
 
         <!-- Bio Content Column -->
@@ -81,8 +81,8 @@ const features = [
           :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'"
         >
           <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-[1px] bg-[#00E275]" />
-            <span class="text-[#00E275] text-sm font-bold uppercase tracking-[0.3em]">Okiem profesjonalisty</span>
+            <div class="w-12 h-[1px] bg-primary" />
+            <span class="text-primary text-sm font-bold uppercase tracking-[0.3em]">Okiem profesjonalisty</span>
           </div>
           
           <h2 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none mb-8">
@@ -94,7 +94,7 @@ const features = [
               Specjalizuję się w dostarczaniu najwyższej jakości materiałów foto i wideo z powietrza. Działam głównie na terenie <span class="text-white font-medium">Warmii i Mazur</span> – regionu, który z perspektywy drona ukazuje swoje pełne, zachwycające oblicze.
             </p>
             <p>
-              Wykorzystuję nowoczesny sprzęt pozwalający na rejestrację obrazu w rozdzielczości <span class="text-[#00E275] font-bold tracking-widest">4K/5K</span>. Każde zlecenie traktuję indywidualnie, dbając o odpowiednie światło, kadr i płynność ujęć, aby finalny materiał stanowił potężne narzędzie marketingowe.
+              Wykorzystuję nowoczesny sprzęt pozwalający na rejestrację obrazu w rozdzielczości <span class="text-primary font-bold tracking-widest">4K</span>. Każde zlecenie traktuję indywidualnie, dbając o odpowiednie światło, kadr i płynność ujęć, aby finalny materiał stanowił potężne narzędzie marketingowe.
             </p>
           </div>
 
@@ -105,7 +105,7 @@ const features = [
               :key="index"
               class="flex items-center gap-4 group"
             >
-              <div class="w-6 h-6 rounded-full border border-[#00E275]/30 flex items-center justify-center text-[#00E275] group-hover:bg-[#00E275] group-hover:text-black transition-all duration-300">
+              <div class="w-6 h-6 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                 </svg>
